@@ -65,6 +65,7 @@ use std::os::raw::*;
 use objc::runtime::{BOOL, Class, NO, YES};
 
 use {
+    dpi,
     Api,
     ContextError,
     CreationError,
@@ -342,7 +343,7 @@ impl GlContext for Context {
     }
 
     #[inline]
-    fn resize(&self, _width: u32, _height: u32) {
+    fn resize(&self, _size: dpi::PhysicalSize) {
         // N/A
     }
 }
